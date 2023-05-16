@@ -1,0 +1,28 @@
+{
+  "name": "skya_itadakimeshi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p start:*",
+    "start:html": "npx @11ty/eleventy --serve",
+    "start:sass": "sass --watch src/styles:dist/assets/styles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzzzzz21/skya_itadakimeshi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzzzzz21/skya_itadakimeshi/issues"
+  },
+  "homepage": "https://github.com/zzzzzz21/skya_itadakimeshi#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1"
+  }
+}

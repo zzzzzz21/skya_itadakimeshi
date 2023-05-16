@@ -1,0 +1,5 @@
+# Ignore artifacts:
+.eleventy.js
+.prettierrc
+.browserslistrc
+package-lock.json
