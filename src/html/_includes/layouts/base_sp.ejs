@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>2022年10月20日 未来のスター選手誕生｜特集｜スカイＡ｜CS放送のスポーツチャンネル</title>
+    <title><%- title %>｜スカイＡ｜CS放送のスポーツチャンネル</title>
     <meta
       name="description"
       content="プロ野球（阪神タイガース主催の公式戦、オープン戦、ファーム戦）や大学野球、夏の高校野球、ゴルフ、スポーツクライミングなど豊富なスポーツ番組を重点的に放送しています。さらに釣りやボウリング、また探偵！ナイトスクープなどの人気番組も彩りを添えています。"
@@ -13,9 +13,10 @@
     />
     <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1.0" />
     <!-- OG START -->
+
     <meta
       property="og:title"
-      content="2022年10月20日 未来のスター選手誕生｜特集｜スカイＡ｜CS放送のスポーツチャンネル"
+      content="<%- title %>｜スカイＡ｜CS放送のスポーツチャンネル"
     />
     <meta property="og:type" content="article" />
     <meta
@@ -57,7 +58,7 @@
       });
       //-->
     </script>
-    <link rel="stylesheet" href="/css/sp/special/special_draft2022.css?v20220913" />
+    <link rel="stylesheet" href="/css/sp/<%- stylesheet %>" />
     <!-- Google Tag Manager -->
     <!-- End Google Tag Manager -->
   </head>
@@ -75,7 +76,12 @@
             >
           </h1>
           <div id="contWarp">
-            <div id="main"><%- content %> <%- include('../partials/special-bottom-sp') %></div>
+            <div id="main">
+               <!-- #コンテンツエリア-->
+              <%- content %>
+               <!-- /#コンテンツエリア-->
+              <%- include('../partials/special-bottom-sp') %>
+            </div>
           </div>
           <%- include('../partials/footer-sp') %>
         </section>

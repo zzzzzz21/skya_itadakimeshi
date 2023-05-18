@@ -1,0 +1,185 @@
+@use '../common/basePC';
+
+.itadakimeshi {
+    background: var(--COLOR_BACKGROUND_ITADAKIMESHI);
+
+    * {
+      box-sizing: border-box;
+    }
+}
+
+.l-mainVisual {
+  background: url(../../img/special/itadakimeshi/img_kv-1.jpg) center/cover no-repeat;
+
+  &__icon {
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+  }
+
+  &__title {
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  &__text {
+    color: var(--COLOR_TEXT_WHITE);
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+.l-content {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 60px auto 0;
+}
+
+.l-main {
+  flex: 1 1 0;
+}
+
+.l-aside {
+  flex: 0 0 272px;
+}
+
+.m-introduction {
+  text-align: center;
+  &__image {
+    // スタイルの定義
+  }
+
+
+  &__date {
+    // スタイルの定義
+    color:  var(--COLOR_TEXT_GRAY);
+    font-size: 16px;
+  }
+
+  &__head {
+    align-items: center;
+    display: flex;
+    gap: 23px;
+    justify-content: center;
+  }
+
+  &__index {
+    align-items: center;
+    background: var(--COLOR_BASE_YELLOW);
+    border-radius: 12px;
+    color: var(--COLOR_TEXT_WHITE);
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
+    width: 103px;
+  }
+
+  &__title {
+    // スタイルの定義
+    font-size: 52px;
+    font-weight: normal;
+  }
+
+  &__subheading {
+    color: var(--COLOR_BASE_YELLOW);
+    font-size: 18px;
+  }
+
+  &__text {
+    font-size: 20px;
+  }
+}
+
+.c-card-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+  &__image {
+    // スタイルの定義
+  }
+
+  &__head {
+
+  }
+
+  &__title {
+    // スタイルの定義
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__subheading {
+    font-size: 18px;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}
+
+.m-backnumber {
+  align-items: center;
+  background: var(--COLOR_BACKGROUND_WHITE);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &__list {
+    width: 100%;
+  }
+  &__item {
+    border: 1px dashed var(--COLOR_BORDER_ITADAKIMESHI);
+  }
+
+  &__link {
+    align-items: center;
+    display: flex;
+    min-height: 72px;
+    padding: 21px 23px;
+  }
+
+  &__index {
+    align-items: center;
+    background: var(--COLOR_BASE_GRAY);
+    display: flex;
+    font-size: 14px;
+    height: 31px;
+    justify-content: center;
+    text-align: center;
+    width: 31px;
+  }
+
+  &__toggle {
+    background-color: var(--COLOR_BACKGROUND_BAIGE_DARK);
+    border: none;
+    color: var(--COLOR_TEXT_BLUE_DARK);
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+}
+
+.c-heading {
+  align-items: center;
+  display: flex;
+  font-size: 26px;
+  &::before {
+    border: 5px solid var(--COLOR_BASE_YELLOW);
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: "";
+    display: flex;
+    height: 24px;
+    width: 24px;
+  }
+}

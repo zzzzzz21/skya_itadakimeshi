@@ -1,0 +1,193 @@
+:root {
+  --COLOR_BASE_WHITE: #FFF;
+  --COLOR_BASE_YELLOW: #FFCC00;
+  --COLOR_BASE_GRAY: #EEE;
+  --COLOR_TEXT_WHITE: #FFF;
+  --COLOR_TEXT_GRAY: #999;
+  --COLOR_TEXT_BLUE: #3366FF;
+  --COLOR_TEXT_BLUE_DARK: #0066FF;
+  --COLOR_BACKGROUND_BREADCRUMB: #707070;
+  --COLOR_BACKGROUND_WHITE: #FFF;
+  --COLOR_BACKGROUND_ITADAKIMESHI: #F4F0EB;
+  --COLOR_BACKGROUND_BAIGE_DARK: #E9E2D9;
+  --COLOR_BORDER_ITADAKIMESHI: #F4F0EB;
+}
+
+#contents-inner {
+  width: 100%;
+  background: #fff;
+}
+
+#pkz {
+  background: var(--COLOR_BACKGROUND_BREADCRUMB);
+  margin: 0;
+  padding: 16px 43px;
+}
+
+#pkz p {
+  color: var(--COLOR_TEXT_WHITE);
+}
+
+#pkz p a {
+  color: inherit;
+}
+
+div#contWarp {
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
+div#main {
+  padding: 0;
+}
+
+.itadakimeshi {
+  background: var(--COLOR_BACKGROUND_ITADAKIMESHI);
+}
+.itadakimeshi * {
+  box-sizing: border-box;
+}
+
+.l-mainVisual {
+  background: url(../../img/special/itadakimeshi/img_kv-1.jpg) center/cover no-repeat;
+}
+.l-mainVisual__icon {
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px;
+}
+.l-mainVisual__title img {
+  margin: 0 auto;
+}
+.l-mainVisual__text {
+  color: var(--COLOR_TEXT_WHITE);
+  font-size: 36px;
+  text-align: center;
+}
+
+.l-content {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 60px auto 0;
+}
+
+.l-main {
+  flex: 1 1 0;
+}
+
+.l-aside {
+  flex: 0 0 272px;
+}
+
+.m-introduction {
+  text-align: center;
+}
+.m-introduction__date {
+  color: var(--COLOR_TEXT_GRAY);
+  font-size: 16px;
+}
+.m-introduction__head {
+  align-items: center;
+  display: flex;
+  gap: 23px;
+  justify-content: center;
+}
+.m-introduction__index {
+  align-items: center;
+  background: var(--COLOR_BASE_YELLOW);
+  border-radius: 12px;
+  color: var(--COLOR_TEXT_WHITE);
+  display: flex;
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+  width: 103px;
+}
+.m-introduction__title {
+  font-size: 52px;
+  font-weight: normal;
+}
+.m-introduction__subheading {
+  color: var(--COLOR_BASE_YELLOW);
+  font-size: 18px;
+}
+.m-introduction__text {
+  font-size: 20px;
+}
+
+.c-card-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+.c-card-item__title {
+  font-size: 20px;
+  font-weight: normal;
+}
+.c-card-item__icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.c-card-item__subheading {
+  font-size: 18px;
+}
+.c-card-item__text {
+  font-size: 18px;
+}
+
+.m-backnumber {
+  align-items: center;
+  background: var(--COLOR_BACKGROUND_WHITE);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.m-backnumber__list {
+  width: 100%;
+}
+.m-backnumber__item {
+  border: 1px dashed var(--COLOR_BORDER_ITADAKIMESHI);
+}
+.m-backnumber__link {
+  align-items: center;
+  display: flex;
+  min-height: 72px;
+  padding: 21px 23px;
+}
+.m-backnumber__index {
+  align-items: center;
+  background: var(--COLOR_BASE_GRAY);
+  display: flex;
+  font-size: 14px;
+  height: 31px;
+  justify-content: center;
+  text-align: center;
+  width: 31px;
+}
+.m-backnumber__toggle {
+  background-color: var(--COLOR_BACKGROUND_BAIGE_DARK);
+  border: none;
+  color: var(--COLOR_TEXT_BLUE_DARK);
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.c-heading {
+  align-items: center;
+  display: flex;
+  font-size: 26px;
+}
+.c-heading::before {
+  border: 5px solid var(--COLOR_BASE_YELLOW);
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  display: flex;
+  height: 24px;
+  width: 24px;
+}

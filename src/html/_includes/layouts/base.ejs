@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>2022年10月20日 未来のスター選手誕生｜特集｜スカイＡ｜CS放送のスポーツチャンネル</title>
+    <title><%- title %>｜スカイＡ｜CS放送のスポーツチャンネル</title>
     <meta
       name="description"
       content="プロ野球（阪神タイガース主催の公式戦、オープン戦、ファーム戦）や大学野球、夏の高校野球、ゴルフ、スポーツクライミングなど豊富なスポーツ番組を重点的に放送しています。さらに釣りやボウリング、また探偵！ナイトスクープなどの人気番組も彩りを添えています。"
@@ -12,9 +12,8 @@
       content="阪神タイガース,スポーツチャンネル,CS放送,スカパー,ケーブルテレビ,ゴルフ,ボウリング,スポーツクライミング、Gift of Aloha ラン＆ライド、BLADE"
     />
     <!-- OG START -->
-    <meta
-      property="og:title"
-      content="2022年10月20日 未来のスター選手誕生｜特集｜スカイＡ｜CS放送のスポーツチャンネル"
+    <meta property="og:title"
+      content="<%- title %>｜特集｜スカイＡ｜CS放送のスポーツチャンネル"
     />
     <meta property="og:type" content="article" />
     <meta
@@ -39,7 +38,7 @@
       <script type="text/javascript" src="/js/jquery.ah-placeholder.js"></script>
     <![endif]-->
     <script src="https://sky-a.asahi.co.jp/js/common.js"></script>
-    <link rel="stylesheet" href="https://sky-a.asahi.co.jp/css/special/special_draft2022.css?v20220913" />
+    <link rel="stylesheet" href="/css/<%- stylesheet %>" />
     <!-- Google Tag Manager -->
     <!-- End Google Tag Manager -->
   </head>
@@ -54,7 +53,11 @@
               <div class="contHead clearfix">
                 <h1 class="headStyle">2022年10月20日 未来のスター選手誕生</h1>
               </div>
-              <div class="main-contents no-right"><%- content %></div>
+              <div class="main-contents no-right">
+                <!-- #コンテンツエリア-->
+                <%- content %>
+                <!-- /#コンテンツエリア-->
+              </div>
             </div>
             <!-- #main -->
           </div>

@@ -1,24 +1,24 @@
-const path = require('path');
-const prettier = require('prettier');
+// const path = require('path');
+// const prettier = require('prettier');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addFilter('isoString', (date = Date.now()) =>
-    new Date(date).toISOString()
-  );
+  // eleventyConfig.addFilter('isoString', (date = Date.now()) =>
+  //   new Date(date).toISOString()
+  // );
 
-  eleventyConfig.addTransform('prettier', function (content, outputPath) {
-    const extname = path.extname(outputPath);
-    switch (extname) {
-      case '.html':
-      case '.json':
-        // Strip leading period from extension and use as the Prettier parser.
-        const parser = extname.replace(/^./, '');
-        return prettier.format(content, { parser });
+  // eleventyConfig.addTransform('prettier', function (content, outputPath) {
+  //   const extname = path.extname(outputPath);
+  //   switch (extname) {
+  //     case '.html':
+  //     case '.json':
+  //       // Strip leading period from extension and use as the Prettier parser.
+  //       const parser = extname.replace(/^./, '');
+  //       return prettier.format(content, { parser });
 
-      default:
-        return content;
-    }
-  });
+  //     default:
+  //       return content;
+  //   }
+  // });
 
   // Return your Object options:
   return {
