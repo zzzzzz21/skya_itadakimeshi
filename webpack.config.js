@@ -1,10 +1,12 @@
 const path = require("path");
 
 module.exports = {
-  entry: './src/scripts/main.js',
+  entry: {
+    itadakimeshi: './src/scripts/idatakimeshi.js',
+  },
   output: {
-    path: path.resolve(__dirname, 'dist/js'),
-    filename: 'main.js'
+    path: path.resolve(__dirname, 'dist/js/special'),
+    filename: '[name].js',
   },
   module: {
     rules: [

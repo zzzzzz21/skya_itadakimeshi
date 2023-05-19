@@ -44,6 +44,8 @@ div#main {
 
 .itadakimeshi {
   background: var(--COLOR_BACKGROUND_ITADAKIMESHI);
+  letter-spacing: 0.025;
+  line-height: 1.7;
 }
 .itadakimeshi * {
   box-sizing: border-box;
@@ -117,25 +119,14 @@ div#main {
   font-size: 20px;
 }
 
-.c-card-item {
+.m-item-list {
+  margin-top: 72px;
+}
+.m-item-list__content {
   display: flex;
-  gap: 24px;
-  position: relative;
-}
-.c-card-item__title {
-  font-size: 20px;
-  font-weight: normal;
-}
-.c-card-item__icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.c-card-item__subheading {
-  font-size: 18px;
-}
-.c-card-item__text {
-  font-size: 18px;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 25px;
 }
 
 .m-backnumber {
@@ -177,6 +168,80 @@ div#main {
   width: 100%;
 }
 
+.c-card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.c-card {
+  background: var(--COLOR_BACKGROUND_WHITE);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 30px 25px;
+  position: relative;
+}
+
+.c-card-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+.c-card-item__image {
+  border-radius: 20px;
+  flex: 0 0 294px;
+  overflow: hidden;
+}
+.c-card-item__content {
+  flex: 1 1 0;
+}
+.c-card-item__head {
+  padding-right: 82px;
+}
+.c-card-item__title {
+  font-size: 20px;
+  font-weight: normal;
+}
+.c-card-item__icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.c-card-item__subheading {
+  font-size: 18px;
+}
+.c-card-item__text {
+  font-size: 18px;
+}
+
+.c-card-story {
+  background: var(--COLOR_BACKGROUND_BAIGE_DARK);
+  border-radius: 20px;
+  margin-top: 62px;
+  padding: 25px 30px;
+}
+.c-card-story__content {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 15px;
+}
+.c-card-story__image {
+  flex: 0 0 327px;
+}
+.c-card-story__description {
+  flex: 1 1 0;
+  font-size: 18px;
+}
+.c-card-story__space {
+  float: left;
+}
+.c-card-story__logo {
+  clear: both;
+  float: left;
+}
+
 .c-heading {
   align-items: center;
   display: flex;
@@ -190,4 +255,30 @@ div#main {
   display: flex;
   height: 24px;
   width: 24px;
+}
+
+.c-list-definition {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 18px;
+  gap: 15px;
+}
+.c-list-definition__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.c-list-definition__term {
+  align-items: center;
+  background: var(--COLOR_BACKGROUND_BAIGE_DARK);
+  border-radius: 7px;
+  padding: 2px 5px;
+}
+
+.c-list-bullet {
+  color: #666;
+  font-size: 16px;
+}
+.c-list-bullet__item {
+  display: flex;
 }

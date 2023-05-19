@@ -6,6 +6,9 @@
     * {
       box-sizing: border-box;
     }
+
+    letter-spacing: .025;
+    line-height: 1.7;
 }
 
 .l-mainVisual {
@@ -93,38 +96,17 @@
   }
 }
 
-.c-card-item {
-  display: flex;
-  gap: 24px;
-  position: relative;
-  &__image {
-    // スタイルの定義
-  }
+.m-item-list {
+  margin-top: 72px;
 
-  &__head {
-
-  }
-
-  &__title {
-    // スタイルの定義
-    font-size: 20px;
-    font-weight: normal;
-  }
-
-  &__icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  &__subheading {
-    font-size: 18px;
-  }
-
-  &__text {
-    font-size: 18px;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 25px;
   }
 }
+
 
 .m-backnumber {
   align-items: center;
@@ -169,6 +151,92 @@
   }
 }
 
+.c-card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.c-card {
+  background: var(--COLOR_BACKGROUND_WHITE);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 30px 25px;
+  position: relative;
+}
+
+.c-card-item {
+  display: flex;
+  gap: 24px;
+  position: relative;
+
+  &__image {
+    border-radius: 20px;
+    flex: 0 0 294px;
+    overflow: hidden;
+  }
+
+  &__content {
+    flex: 1 1 0;
+  }
+
+  &__head {
+    padding-right: 82px;
+  }
+
+  &__title {
+    // スタイルの定義
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__subheading {
+    font-size: 18px;
+  }
+
+  &__text {
+    font-size: 18px;
+  }
+}
+
+.c-card-story {
+  background: var(--COLOR_BACKGROUND_BAIGE_DARK);
+  border-radius: 20px;
+  margin-top: 62px;
+  padding: 25px 30px;
+  &__content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 15px;
+  }
+
+  &__image {
+    flex: 0 0 327px;
+  }
+
+  &__description {
+    flex: 1 1 0;
+    font-size: 18px;
+  }
+
+  &__space {
+    float: left;
+  }
+
+  &__logo {
+    clear: both;
+    float: left;
+  }
+}
+
 .c-heading {
   align-items: center;
   display: flex;
@@ -181,5 +249,34 @@
     display: flex;
     height: 24px;
     width: 24px;
+  }
+}
+
+.c-list-definition {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 18px;
+  gap: 15px;
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  &__term {
+    align-items: center;
+    background: var(--COLOR_BACKGROUND_BAIGE_DARK);
+    border-radius: 7px;
+    padding: 2px 5px;
+  }
+}
+
+.c-list-bullet {
+  color: #666;
+  font-size: 16px;
+
+  &__item {
+    display: flex;
   }
 }
