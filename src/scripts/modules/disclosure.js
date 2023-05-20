@@ -9,10 +9,8 @@ export default class Disclosure {
     this.controlledElment = false;
     const id = this.button.getAttribute('aria-controls');
 
-    console.log(id);
-
     if (id) {
-      this.controlledElment = document.getElementById(id);
+      this.controlledElment = this.root.querySelector(`#${id}`);
     }
   }
 

@@ -38,7 +38,22 @@ script: /js/special/itadakimeshi.js
             <span>バックナンバー</span>
           </h2>
           <div class="c-card__image">
-             <img src="/img/special/itadakimeshi/img_map-1.jpg" alt="">
+            <button data-micromodal-trigger="modal-1" role="button">
+              <img src="/img/special/itadakimeshi/img_map-1.jpg" alt="">
+            </button>
+          </div>
+
+          <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+              <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+                <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+                <div class="modal__content" id="modal-1-content">
+                  <p>
+                    Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="c-card__content">
             <dl class="c-list-definition">
@@ -149,6 +164,24 @@ script: /js/special/itadakimeshi.js
             </div>
           </div>
       </div>
+      <div class="m-pager">
+        <div class="c-pager">
+          <div class="c-pager__content">
+            <div class="c-pager__item">
+              <a href="#TODO" class="c-pager__link">
+                <span class="c-pager__arrow c-pager__arrow--prev">前へ</span>
+                <span class="c-pager__text">#1  筑波山 × 平山祐介</span>
+              </a>
+            </div>
+            <div class="c-pager__item">
+              <a href="#TODO" class="c-pager__link">
+                <span class="c-pager__text">#2  吉野山 × 三船美佳</span>
+                <span class="c-pager__arrow c-pager__arrow--next">次へ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="l-aside">
       <div class="m-backnumber">
@@ -182,11 +215,45 @@ script: /js/special/itadakimeshi.js
           </li>
         </ol>
         <div class="js-disclosure">
-          <button type="button" class="m-backnumber__toggle js-disclosure__button" aria-expanded="true" aria-controls="id_long_desc">Data Table for Minard's Chart</button>
-          <div id="id_long_desc" class="js-disclosure__content c-discosure__content">
-            test
+                    <div id="id_long_desc" class="js-disclosure__content c-discosure__content">
+            <ol class="m-backnumber__list">
+              <li class="m-backnumber__item">
+                <a href="#TODO" class="m-backnumber__link">
+                  <span class="m-backnumber__index">#4</span>
+                  <span class="m-backnumber__text">大和葛城山 × 安涼奈</span>
+                </a>
+              </li>
+              <li class="m-backnumber__item">
+                <a href="#TODO" class="m-backnumber__link">
+                  <span class="m-backnumber__index">#3</span>
+                  <span class="m-backnumber__text">日の出山 × 戸田れい</span>
+                </a>
+              </li>
+              <li class="m-backnumber__item">
+                <a href="#TODO" class="m-backnumber__link">
+                  <span class="m-backnumber__index">#2</span>
+                  <span class="m-backnumber__text">吉野山 × 三船美佳</span>
+                </a>
+              </li>
+              <li class="m-backnumber__item">
+                <a href="#TODO" class="m-backnumber__link">
+                  <span class="m-backnumber__index">#1</span>
+                  <span class="m-backnumber__text">筑波山 × 平山祐介</span>
+                </a>
+              </li>
+            </ol>
           </div>
+          <button type="button" class="m-backnumber__toggle js-disclosure__button" aria-expanded="true" aria-controls="id_long_desc">Data Table for Minard's Chart</button>
         </div>
+      </div>
+      <div class="m-banner-list">
+        <ul class="c-list-banner">
+          <li class="c-list-banner__item">
+            <a href="#TODO" class="c-list-banner__link">
+              <img src="/img/special/itadakimeshi/bnr_side-1.jpg" alt="" width="270" height="90">
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

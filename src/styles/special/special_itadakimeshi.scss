@@ -1,13 +1,15 @@
 @use '../common/basePC';
+@use '../object/library/microModal';
 
 .itadakimeshi {
     background: var(--COLOR_BACKGROUND_ITADAKIMESHI);
+    padding-bottom: 112px;
 
     * {
       box-sizing: border-box;
     }
 
-    letter-spacing: .025;
+    letter-spacing: .025em;
     line-height: 1.7;
 }
 
@@ -107,6 +109,13 @@
   }
 }
 
+.m-banner-list {
+  margin-top: 40px;
+}
+
+.m-pager {
+  margin-top: 112px;
+}
 
 .m-backnumber {
   align-items: center;
@@ -279,4 +288,33 @@
   &__item {
     display: flex;
   }
+}
+
+.c-pager {
+  font-size: 18px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__arrow {
+    &--prev {
+      &::before {
+        content: "＜";
+      }
+    }
+    &--next {
+      &::after {
+        content: "＞";
+      }
+    }
+  }
+}
+
+.c-list-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
