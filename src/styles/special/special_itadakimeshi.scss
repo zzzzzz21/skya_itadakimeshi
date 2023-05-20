@@ -9,6 +9,11 @@
       box-sizing: border-box;
     }
 
+    button {
+      border: none;
+      cursor: pointer;
+    }
+
     letter-spacing: .025em;
     line-height: 1.7;
 }
@@ -40,6 +45,29 @@
   gap: 50px;
   max-width: 1200px;
   margin: 60px auto 0;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    background: url(../../img/special/itadakimeshi/bg_icon-1.png) center/auto no-repeat;
+    height: 257px;
+    right: -384px;
+    top: -61px;
+    width: 313px;
+  }
+
+  &::after {
+    background: url(../../img/special/itadakimeshi/bg_icon-3.png) center/auto no-repeat;
+    bottom: 57px;
+    height: 337px;
+    right: -373px;
+    width: 586px;
+  }
 }
 
 .l-main {
@@ -50,17 +78,25 @@
   flex: 0 0 272px;
 }
 
+.l-bottomBanner {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 155px 0 52px;
+}
+
 .m-introduction {
   text-align: center;
   &__image {
-    // スタイルの定義
+    margin-bottom: 36px;
   }
 
 
   &__date {
-    // スタイルの定義
     color:  var(--COLOR_TEXT_GRAY);
+    display: block;
     font-size: 16px;
+    padding-left: 70px;
   }
 
   &__head {
@@ -68,6 +104,7 @@
     display: flex;
     gap: 23px;
     justify-content: center;
+    line-height: 1.2;
   }
 
   &__index {
@@ -78,12 +115,13 @@
     display: flex;
     font-size: 40px;
     justify-content: center;
+    line-height: 1;
+    padding: 5px 10px;
     text-align: center;
     width: 103px;
   }
 
   &__title {
-    // スタイルの定義
     font-size: 52px;
     font-weight: normal;
   }
@@ -91,15 +129,29 @@
   &__subheading {
     color: var(--COLOR_BASE_YELLOW);
     font-size: 18px;
+    padding-left: 66px;
+    letter-spacing: 0;
   }
 
   &__text {
     font-size: 20px;
+    margin-top: 12px;
   }
 }
 
 .m-item-list {
-  margin-top: 72px;
+  margin-top: 50px;
+  position: relative;
+
+  &::before {
+    background: url(../../img/special/itadakimeshi/bg_icon-2.png) center/auto no-repeat;
+    content: "";
+    height: 77px;
+    left: -349px;
+    position: absolute;
+    top: 62px;
+    width: 273px;
+  }
 
   &__content {
     display: flex;
@@ -110,7 +162,7 @@
 }
 
 .m-banner-list {
-  margin-top: 40px;
+  margin: 40px auto 62px;
 }
 
 .m-pager {
@@ -135,8 +187,16 @@
   &__link {
     align-items: center;
     display: flex;
+    gap: 14px;
     min-height: 72px;
-    padding: 21px 23px;
+    padding: 20px 23px;
+
+    &:hover,
+    &.is-current {
+      opacity: 1;
+      background: var(--COLOR_BACKGROUND_BAIGE_LIGHT);
+    }
+
   }
 
   &__index {
@@ -146,8 +206,13 @@
     font-size: 14px;
     height: 31px;
     justify-content: center;
+    line-height: 1;
     text-align: center;
     width: 31px;
+  }
+
+  &__text {
+    font-size: 18px;
   }
 
   &__toggle {
@@ -156,14 +221,54 @@
     color: var(--COLOR_TEXT_BLUE_DARK);
     cursor: pointer;
     display: block;
+    font-size: 18px;
+    min-height: 75px;
+    padding: 10px;
+    transition: all ease .3s;
+    width: 100%;
+
+    &:hover {
+      background-color: var(--COLOR_TEXT_BLUE_DARK);
+      color:  var(--COLOR_TEXT_WHITE);
+      & > span {
+        &::after {
+          border-color: var(--COLOR_TEXT_WHITE);
+        }
+      }
+    }
+
+    & > span {
+      align-items: center;
+      color: inherit;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      position: relative;
+
+      &::after {
+        border-bottom: 3px solid var(--COLOR_TEXT_BLUE_DARK);
+        border-right: 3px solid var(--COLOR_TEXT_BLUE_DARK);
+        content: "";
+        display: inline-block;
+        height: 9px;
+        margin: -4px 0 0;
+        transform: rotate(45deg);
+        transition: all ease .3s;
+        width: 9px;
+      }
+    }
+  }
+
+  &__disclosure {
     width: 100%;
   }
 }
 
-.c-card-list {
+.m-card-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  margin-top: 64px;
 }
 
 .c-card {
@@ -172,14 +277,39 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 30px 25px;
+  padding: 24px 25px 30px;
   position: relative;
+
+  &__image {
+    font-size: 0;
+    margin-top: 16px;
+  }
+
+  &__content {
+    margin-top: 20px;
+  }
+
+  &__dt {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__dd {
+    font-size: 18px;
+    margin-top: 10px;
+  }
 }
 
 .c-card-item {
   display: flex;
   gap: 24px;
   position: relative;
+
+  & a {
+    color: blue;
+  }
 
   &__image {
     border-radius: 20px;
@@ -196,7 +326,6 @@
   }
 
   &__title {
-    // スタイルの定義
     font-size: 20px;
     font-weight: normal;
   }
@@ -220,11 +349,13 @@
   background: var(--COLOR_BACKGROUND_BAIGE_DARK);
   border-radius: 20px;
   margin-top: 62px;
-  padding: 25px 30px;
+  padding: 18px 30px 25px;
+
   &__content {
     display: flex;
     flex-direction: row-reverse;
     gap: 15px;
+    margin-top: 8px;
   }
 
   &__image {
@@ -244,20 +375,37 @@
     clear: both;
     float: left;
   }
+
+  &__text {
+    line-height: 1.9;
+  }
 }
 
 .c-heading {
   align-items: center;
   display: flex;
   font-size: 26px;
+  gap: 6px;
+
+  &--center {
+    justify-content: center;
+  }
+
   &::before {
-    border: 5px solid var(--COLOR_BASE_YELLOW);
+    border: 6px solid var(--COLOR_BASE_YELLOW);
     border-radius: 50%;
     box-sizing: border-box;
     content: "";
     display: flex;
-    height: 24px;
-    width: 24px;
+    height: 23px;
+    width: 23px;
+  }
+
+  &--small {
+    &::before {
+      height: 21px;
+      width: 21px;
+    }
   }
 }
 
@@ -265,19 +413,20 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 18px;
-  gap: 15px;
+  gap: 15px 20px;
 
   &__item {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 10px 5px;
   }
 
   &__term {
-    align-items: center;
     background: var(--COLOR_BACKGROUND_BAIGE_DARK);
     border-radius: 7px;
-    padding: 2px 5px;
+    line-height: 1.4;
+    padding: 0 10px;
   }
 }
 
@@ -299,7 +448,16 @@
     gap: 40px;
   }
 
+  &__link {
+    display: flex;
+    gap: 20px;
+  }
+
   &__arrow {
+    color: var(--COLOR_TEXT_BLUE_DARK);
+    display: flex;
+    gap: 5px;
+
     &--prev {
       &::before {
         content: "＜";

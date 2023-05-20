@@ -11,6 +11,7 @@
   --COLOR_BACKGROUND_WHITE: #FFF;
   --COLOR_BACKGROUND_ITADAKIMESHI: #F4F0EB;
   --COLOR_BACKGROUND_BAIGE_DARK: #E9E2D9;
+  --COLOR_BACKGROUND_BAIGE_LIGHT: #FEFAD5;
   --COLOR_BORDER_ITADAKIMESHI: #F4F0EB;
 }
 
@@ -209,6 +210,10 @@ div#main {
 .itadakimeshi * {
   box-sizing: border-box;
 }
+.itadakimeshi button {
+  border: none;
+  cursor: pointer;
+}
 
 .l-mainVisual {
   background: url(../../img/special/itadakimeshi/img_kv-1.jpg) center/cover no-repeat;
@@ -232,6 +237,25 @@ div#main {
   gap: 50px;
   max-width: 1200px;
   margin: 60px auto 0;
+  position: relative;
+}
+.l-content::before, .l-content::after {
+  content: "";
+  position: absolute;
+}
+.l-content::before {
+  background: url(../../img/special/itadakimeshi/bg_icon-1.png) center/auto no-repeat;
+  height: 257px;
+  right: -384px;
+  top: -61px;
+  width: 313px;
+}
+.l-content::after {
+  background: url(../../img/special/itadakimeshi/bg_icon-3.png) center/auto no-repeat;
+  bottom: 57px;
+  height: 337px;
+  right: -373px;
+  width: 586px;
 }
 
 .l-main {
@@ -242,18 +266,31 @@ div#main {
   flex: 0 0 272px;
 }
 
+.l-bottomBanner {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 155px 0 52px;
+}
+
 .m-introduction {
   text-align: center;
 }
+.m-introduction__image {
+  margin-bottom: 36px;
+}
 .m-introduction__date {
   color: var(--COLOR_TEXT_GRAY);
+  display: block;
   font-size: 16px;
+  padding-left: 70px;
 }
 .m-introduction__head {
   align-items: center;
   display: flex;
   gap: 23px;
   justify-content: center;
+  line-height: 1.2;
 }
 .m-introduction__index {
   align-items: center;
@@ -263,6 +300,8 @@ div#main {
   display: flex;
   font-size: 40px;
   justify-content: center;
+  line-height: 1;
+  padding: 5px 10px;
   text-align: center;
   width: 103px;
 }
@@ -273,13 +312,26 @@ div#main {
 .m-introduction__subheading {
   color: var(--COLOR_BASE_YELLOW);
   font-size: 18px;
+  padding-left: 66px;
+  letter-spacing: 0;
 }
 .m-introduction__text {
   font-size: 20px;
+  margin-top: 12px;
 }
 
 .m-item-list {
-  margin-top: 72px;
+  margin-top: 50px;
+  position: relative;
+}
+.m-item-list::before {
+  background: url(../../img/special/itadakimeshi/bg_icon-2.png) center/auto no-repeat;
+  content: "";
+  height: 77px;
+  left: -349px;
+  position: absolute;
+  top: 62px;
+  width: 273px;
 }
 .m-item-list__content {
   display: flex;
@@ -289,7 +341,7 @@ div#main {
 }
 
 .m-banner-list {
-  margin-top: 40px;
+  margin: 40px auto 62px;
 }
 
 .m-pager {
@@ -313,8 +365,13 @@ div#main {
 .m-backnumber__link {
   align-items: center;
   display: flex;
+  gap: 14px;
   min-height: 72px;
-  padding: 21px 23px;
+  padding: 20px 23px;
+}
+.m-backnumber__link:hover, .m-backnumber__link.is-current {
+  opacity: 1;
+  background: var(--COLOR_BACKGROUND_BAIGE_LIGHT);
 }
 .m-backnumber__index {
   align-items: center;
@@ -323,8 +380,12 @@ div#main {
   font-size: 14px;
   height: 31px;
   justify-content: center;
+  line-height: 1;
   text-align: center;
   width: 31px;
+}
+.m-backnumber__text {
+  font-size: 18px;
 }
 .m-backnumber__toggle {
   background-color: var(--COLOR_BACKGROUND_BAIGE_DARK);
@@ -332,13 +393,47 @@ div#main {
   color: var(--COLOR_TEXT_BLUE_DARK);
   cursor: pointer;
   display: block;
+  font-size: 18px;
+  min-height: 75px;
+  padding: 10px;
+  transition: all ease 0.3s;
+  width: 100%;
+}
+.m-backnumber__toggle:hover {
+  background-color: var(--COLOR_TEXT_BLUE_DARK);
+  color: var(--COLOR_TEXT_WHITE);
+}
+.m-backnumber__toggle:hover > span::after {
+  border-color: var(--COLOR_TEXT_WHITE);
+}
+.m-backnumber__toggle > span {
+  align-items: center;
+  color: inherit;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  position: relative;
+}
+.m-backnumber__toggle > span::after {
+  border-bottom: 3px solid var(--COLOR_TEXT_BLUE_DARK);
+  border-right: 3px solid var(--COLOR_TEXT_BLUE_DARK);
+  content: "";
+  display: inline-block;
+  height: 9px;
+  margin: -4px 0 0;
+  transform: rotate(45deg);
+  transition: all ease 0.3s;
+  width: 9px;
+}
+.m-backnumber__disclosure {
   width: 100%;
 }
 
-.c-card-list {
+.m-card-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  margin-top: 64px;
 }
 
 .c-card {
@@ -347,14 +442,34 @@ div#main {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 30px 25px;
+  padding: 24px 25px 30px;
   position: relative;
+}
+.c-card__image {
+  font-size: 0;
+  margin-top: 16px;
+}
+.c-card__content {
+  margin-top: 20px;
+}
+.c-card__dt {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+}
+.c-card__dd {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .c-card-item {
   display: flex;
   gap: 24px;
   position: relative;
+}
+.c-card-item a {
+  color: blue;
 }
 .c-card-item__image {
   border-radius: 20px;
@@ -387,12 +502,13 @@ div#main {
   background: var(--COLOR_BACKGROUND_BAIGE_DARK);
   border-radius: 20px;
   margin-top: 62px;
-  padding: 25px 30px;
+  padding: 18px 30px 25px;
 }
 .c-card-story__content {
   display: flex;
   flex-direction: row-reverse;
   gap: 15px;
+  margin-top: 8px;
 }
 .c-card-story__image {
   flex: 0 0 327px;
@@ -408,38 +524,50 @@ div#main {
   clear: both;
   float: left;
 }
+.c-card-story__text {
+  line-height: 1.9;
+}
 
 .c-heading {
   align-items: center;
   display: flex;
   font-size: 26px;
+  gap: 6px;
+}
+.c-heading--center {
+  justify-content: center;
 }
 .c-heading::before {
-  border: 5px solid var(--COLOR_BASE_YELLOW);
+  border: 6px solid var(--COLOR_BASE_YELLOW);
   border-radius: 50%;
   box-sizing: border-box;
   content: "";
   display: flex;
-  height: 24px;
-  width: 24px;
+  height: 23px;
+  width: 23px;
+}
+.c-heading--small::before {
+  height: 21px;
+  width: 21px;
 }
 
 .c-list-definition {
   display: flex;
   flex-wrap: wrap;
   font-size: 18px;
-  gap: 15px;
+  gap: 15px 20px;
 }
 .c-list-definition__item {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 10px 5px;
 }
 .c-list-definition__term {
-  align-items: center;
   background: var(--COLOR_BACKGROUND_BAIGE_DARK);
   border-radius: 7px;
-  padding: 2px 5px;
+  line-height: 1.4;
+  padding: 0 10px;
 }
 
 .c-list-bullet {
@@ -457,6 +585,15 @@ div#main {
   display: flex;
   justify-content: center;
   gap: 40px;
+}
+.c-pager__link {
+  display: flex;
+  gap: 20px;
+}
+.c-pager__arrow {
+  color: var(--COLOR_TEXT_BLUE_DARK);
+  display: flex;
+  gap: 5px;
 }
 .c-pager__arrow--prev::before {
   content: "＜";

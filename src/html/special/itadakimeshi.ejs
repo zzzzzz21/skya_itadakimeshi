@@ -32,10 +32,10 @@ script: /js/special/itadakimeshi.js
 日本百景にも選ばれる、女体山 山頂からの景色と地の食材を使った頂きメシを堪能しました！
         </p>
       </section>
-      <section class="c-card-list">
+      <section class="m-card-list">
         <div class="c-card">
-          <h2 class="c-heading">
-            <span>バックナンバー</span>
+          <h2 class="c-heading c-heading--center">
+            <span>ルートマップ</span>
           </h2>
           <div class="c-card__image">
             <button data-micromodal-trigger="modal-1" role="button">
@@ -48,9 +48,7 @@ script: /js/special/itadakimeshi.js
               <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
                 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                 <div class="modal__content" id="modal-1-content">
-                  <p>
-                    Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
-                  </p>
+                  <img src="/img/special/itadakimeshi/img_map-1.jpg" alt="">
                 </div>
               </div>
             </div>
@@ -77,28 +75,17 @@ script: /js/special/itadakimeshi.js
           </div>
         </div>
         <div class="c-card">
-          <h2 class="c-heading">
+          <h2 class="c-heading c-heading--center">
             <span>今回の頂きメシ</span>
           </h2>
           <div class="c-card__image">
              <img src="/img/special/itadakimeshi/img_food-1.jpg" alt="">
           </div>
           <div class="c-card__content">
-            <dl class="c-list-definition">
-              <div class="c-list-definition__item">
-                <dt class="c-list-definition__term">所要時間</dt>
-                <dd class="c-list-definition__description">2時間5分</dd>
-              </div>
-              <div class="c-list-definition__item">
-                <dt class="c-list-definition__term">距離</dt>
-                <dd class="c-list-definition__description">3.2km</dd>
-              </div>
-              <div class="c-list-definition__item">
-                <dt class="c-list-definition__term">登山口までのアクセス</dt>
-                <dd class="c-list-definition__description">東京都心から約1時間半</dd>
-              </div>
+            <dl class="c-card__dl">
+              <dt class="c-card__dt">つくばうどんと<br>手作りいなり寿司</dt>
+              <dd class="c-card__dd">つくね＋くろ野菜＋ばら肉の頭文字を取った、名物・つくばうどん。平山さんは奥様の手作りいなり寿司とともに頂きました。</dd>
             </dl>
-
           </div>
         </div>
       </section>
@@ -160,7 +147,7 @@ script: /js/special/itadakimeshi.js
               <div class="c-card-story__logo">
                 <img src="/img/special/itadakimeshi/icon_photo-1.png" alt="" width="91" height="90">
               </div>
-              <p class="c-card-story__text">いなり寿司を食べる時、自分のとは別にもう一つのお弁当箱を取り出した平山さん。なんとそこには、奥様がスタッフ用に作って下さったいなり寿司が！平山家の味、すごく美味しかったです！平山さんも山頂まで運んで下さり、ありがとうございました。<br>登山中に6歳の男の子がいる家族連れに出会った平山さん。今年で４歳になる息子さんと、「早く一緒に登山したい！」と意気込んでいました！</p>
+              <p class="c-card-story__text">いなり寿司を食べる時、自分のとは別にもう一つのお弁当箱を取り出した平山さん。なんとそこには、奥様がスタッフ用に作って下さったいなり寿司が！平山家の味、すごく美味しかったです！平山さんも山頂まで運んで下さり、ありがとうございました。<br>登山中に6歳の男の子がいる家族連れに出会った平山さん。<br>今年で４歳になる息子さんと、「早く一緒に登山したい！」と意気込んでいました！</p>
             </div>
           </div>
       </div>
@@ -185,9 +172,11 @@ script: /js/special/itadakimeshi.js
     </div>
     <div class="l-aside">
       <div class="m-backnumber">
-        <h2 class="c-heading">
-          <span>バックナンバー</span>
-        </h2>
+        <div class="m-backnumber__head">
+          <h2 class="c-heading">
+            <span>バックナンバー</span>
+          </h2>
+        </div>
         <ol class="m-backnumber__list">
           <li class="m-backnumber__item">
             <a href="#TODO" class="m-backnumber__link">
@@ -214,8 +203,8 @@ script: /js/special/itadakimeshi.js
             </a>
           </li>
         </ol>
-        <div class="js-disclosure">
-                    <div id="id_long_desc" class="js-disclosure__content c-discosure__content">
+        <div class="m-backnumber__disclosure js-disclosure">
+          <div id="id_long_desc" class="js-disclosure__content c-discosure__content">
             <ol class="m-backnumber__list">
               <li class="m-backnumber__item">
                 <a href="#TODO" class="m-backnumber__link">
@@ -243,7 +232,14 @@ script: /js/special/itadakimeshi.js
               </li>
             </ol>
           </div>
-          <button type="button" class="m-backnumber__toggle js-disclosure__button" aria-expanded="true" aria-controls="id_long_desc">Data Table for Minard's Chart</button>
+          <button
+            type="button"
+            class="m-backnumber__toggle js-disclosure__button"
+            aria-expanded="true"
+            aria-controls="id_long_desc"
+            data-label-open="もっと見る"
+            data-label-close="とじる"
+          ><span>もっと見る</span></button>
         </div>
       </div>
       <div class="m-banner-list">
@@ -253,8 +249,28 @@ script: /js/special/itadakimeshi.js
               <img src="/img/special/itadakimeshi/bnr_side-1.jpg" alt="" width="270" height="90">
             </a>
           </li>
+          <li class="c-list-banner__item">
+            <a href="#TODO" class="c-list-banner__link">
+              <img src="/img/special/itadakimeshi/bnr_side-1.jpg" alt="" width="270" height="90">
+            </a>
+          </li>
+          <li class="c-list-banner__item">
+            <a href="#TODO" class="c-list-banner__link">
+              <img src="/img/special/itadakimeshi/bnr_side-1.jpg" alt="" width="270" height="90">
+            </a>
+          </li>
+          <li class="c-list-banner__item">
+            <a href="#TODO" class="c-list-banner__link">
+              <img src="/img/special/itadakimeshi/bnr_side-4.jpg" alt="" width="270" height="90">
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </div>
+</div>
+<div class="l-bottomBanner">
+  <a href="" class="l-bottomBanner__link">
+    <img src="/img/special/itadakimeshi/bnr_bottom-1.jpg" alt="">
+  </a>
 </div>
