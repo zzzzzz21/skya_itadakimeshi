@@ -102,6 +102,7 @@
     border-radius: 12px;
     color: var(--COLOR_TEXT_WHITE);
     display: flex;
+    flex: 0 0 103px;
     font-size: 40px;
     justify-content: center;
     line-height: 1;
@@ -197,6 +198,7 @@
     align-items: center;
     background: var(--COLOR_BASE_GRAY);
     display: flex;
+    flex: 0 0 31px;
     font-size: 14px;
     height: 31px;
     justify-content: center;
@@ -227,6 +229,15 @@
       & > span {
         &::after {
           border-color: var(--COLOR_TEXT_WHITE);
+        }
+      }
+    }
+
+    &[aria-expanded="true"] {
+      & > span {
+        &::after {
+          margin: 4px 0 0;
+          transform: rotate(-135deg);
         }
       }
     }
@@ -350,6 +361,12 @@
     position: absolute;
     right: 0;
     top: 0;
+    max-width: 100px;
+
+    img {
+      height: auto;
+      max-width: 100%;
+    }
   }
 
   &__subheading {
@@ -376,6 +393,10 @@
 
   &__image {
     flex: 0 0 327px;
+
+    img {
+      object-fit: fill;
+    }
   }
 
   &__description {

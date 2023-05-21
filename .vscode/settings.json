@@ -18,5 +18,7 @@
   "[js]": {
     "editor.formatOnPaste": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "liveServer.settings.root": "/dist",
+  "liveServer.settings.useLocalIp": true,
 }

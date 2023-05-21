@@ -295,6 +295,7 @@ div#main {
   border-radius: 12px;
   color: var(--COLOR_TEXT_WHITE);
   display: flex;
+  flex: 0 0 103px;
   font-size: 40px;
   justify-content: center;
   line-height: 1;
@@ -377,6 +378,7 @@ div#main {
   align-items: center;
   background: var(--COLOR_BASE_GRAY);
   display: flex;
+  flex: 0 0 31px;
   font-size: 14px;
   height: 31px;
   justify-content: center;
@@ -405,6 +407,10 @@ div#main {
 }
 .m-backnumber__toggle:hover > span::after {
   border-color: var(--COLOR_TEXT_WHITE);
+}
+.m-backnumber__toggle[aria-expanded=true] > span::after {
+  margin: 4px 0 0;
+  transform: rotate(-135deg);
 }
 .m-backnumber__toggle > span {
   align-items: center;
@@ -509,6 +515,11 @@ div#main {
   position: absolute;
   right: 0;
   top: 0;
+  max-width: 100px;
+}
+.c-card-item__icon img {
+  height: auto;
+  max-width: 100%;
 }
 .c-card-item__subheading {
   font-size: 18px;
@@ -531,6 +542,9 @@ div#main {
 }
 .c-card-story__image {
   flex: 0 0 327px;
+}
+.c-card-story__image img {
+  object-fit: fill;
 }
 .c-card-story__description {
   flex: 1 1 0;

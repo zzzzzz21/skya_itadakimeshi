@@ -16,6 +16,10 @@
   --COLOR_BORDER_ITADAKIMESHI: #F4F0EB;
 }
 
+#main {
+  overflow: hidden;
+}
+
 /**************************\
   Basic Modal Styles
 \**************************/
@@ -221,7 +225,7 @@
   background: url(../../../img/special/itadakimeshi/bg_icon-3.png) center/100% no-repeat;
   content: "";
   height: 168px;
-  left: 74px;
+  left: 25%;
   position: absolute;
   top: -62px;
   width: 293px;
@@ -348,6 +352,7 @@
   background: var(--COLOR_BASE_GRAY);
   display: flex;
   font-size: 13px;
+  flex: 0 0 27px;
   height: 27px;
   justify-content: center;
   line-height: 1;
@@ -394,6 +399,10 @@
   transform: rotate(45deg);
   transition: all ease 0.3s;
   width: 6px;
+}
+.m-backnumber__toggle[aria-expanded=true] > span::after {
+  margin: 4px 0 0;
+  transform: rotate(-135deg);
 }
 .m-backnumber__disclosure {
   width: 100%;
@@ -443,8 +452,12 @@
   font-size: 0;
   margin-top: 10px;
 }
+.c-card__image button {
+  width: 100%;
+}
 .c-card__image img {
   object-fit: fill;
+  width: 100%;
 }
 .c-card__content {
   margin-top: 20px;
@@ -474,8 +487,12 @@
   font-size: 0;
   overflow: hidden;
 }
+.c-card-item__image button {
+  width: 100%;
+}
 .c-card-item__image img {
   object-fit: fill;
+  width: 100%;
 }
 .c-card-item__head {
   display: flex;
@@ -512,6 +529,9 @@
 }
 .c-card-story__image {
   font-size: 0;
+}
+.c-card-story__image img {
+  width: 100%;
 }
 .c-card-story__description {
   font-size: 12px;
@@ -609,6 +629,9 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.c-list-banner img {
+  width: 100%;
 }
 
 .js-floating-image__spacer {
