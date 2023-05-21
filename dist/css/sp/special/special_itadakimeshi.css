@@ -33,7 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 10;
 }
 
 .modal__container {
@@ -181,7 +181,7 @@
 
 .itadakimeshi {
   background: var(--COLOR_BACKGROUND_ITADAKIMESHI);
-  padding-bottom: 112px;
+  padding-bottom: 70px;
   letter-spacing: 0.025em;
   line-height: 1.7;
 }
@@ -204,8 +204,9 @@
   flex-direction: column;
   gap: 50px;
   max-width: 1240px;
-  margin: 60px auto 0;
-  padding: 0 20px;
+  margin: 25px auto 0;
+  padding: 0 15px;
+  overflow: hidden;
   position: relative;
 }
 
@@ -213,58 +214,81 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  padding: 155px 0 52px;
+  position: relative;
+  padding: 65px 0 42px;
+}
+.l-bottomBanner::before {
+  background: url(../../../img/special/itadakimeshi/bg_icon-3.png) center/100% no-repeat;
+  content: "";
+  height: 168px;
+  left: 74px;
+  position: absolute;
+  top: -62px;
+  width: 293px;
+}
+.l-bottomBanner__link {
+  position: relative;
+  z-index: 1;
 }
 
 .m-introduction {
+  position: relative;
   text-align: center;
 }
+.m-introduction::before {
+  background: url(../../../img/special/itadakimeshi/bg_icon-1.png) center/100% no-repeat;
+  content: "";
+  height: 128px;
+  position: absolute;
+  right: -32px;
+  bottom: -52px;
+  width: 156px;
+}
 .m-introduction__image {
-  margin-bottom: 36px;
+  margin-bottom: 12px;
 }
 .m-introduction__date {
   color: var(--COLOR_TEXT_GRAY);
   display: block;
-  font-size: 16px;
-  padding-left: 70px;
+  font-size: 10px;
 }
 .m-introduction__head {
   align-items: center;
   display: flex;
-  gap: 23px;
+  gap: 10px;
   justify-content: center;
   line-height: 1.2;
 }
 .m-introduction__index {
   align-items: center;
   background: var(--COLOR_BASE_YELLOW);
-  border-radius: 12px;
+  border-radius: 6px;
   color: var(--COLOR_TEXT_WHITE);
   display: flex;
-  font-size: 40px;
+  flex: 0 0 48px;
+  font-size: 18px;
   justify-content: center;
   line-height: 1;
-  padding: 5px 10px;
+  padding: 2px 5px;
   text-align: center;
-  width: 103px;
+  width: 48px;
 }
 .m-introduction__title {
-  font-size: 52px;
+  font-size: 24px;
   font-weight: normal;
 }
 .m-introduction__subheading {
   color: var(--COLOR_BASE_YELLOW);
-  font-size: 18px;
-  padding-left: 66px;
+  font-size: 10px;
   letter-spacing: 0;
 }
 .m-introduction__text {
-  font-size: 20px;
+  font-size: 12px;
   margin-top: 12px;
 }
 
 .m-item-list {
-  margin-top: 50px;
+  margin-top: 20px;
   position: relative;
 }
 .m-item-list::before {
@@ -280,21 +304,21 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-top: 18px;
+  margin-top: 8px;
 }
 
 .m-banner-list {
-  margin: 40px auto 62px;
+  margin: 40px auto 0;
 }
 
 .m-pager {
-  margin-top: 112px;
+  margin-top: 42px;
 }
 
 .m-backnumber {
   align-items: center;
   background: var(--COLOR_BACKGROUND_WHITE);
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -312,8 +336,8 @@
   align-items: center;
   display: flex;
   gap: 14px;
-  min-height: 72px;
-  padding: 20px 23px;
+  min-height: 60px;
+  padding: 10px 10px 10px 60px;
 }
 .m-backnumber__link:hover, .m-backnumber__link.is-current {
   opacity: 1;
@@ -323,15 +347,15 @@
   align-items: center;
   background: var(--COLOR_BASE_GRAY);
   display: flex;
-  font-size: 14px;
-  height: 31px;
+  font-size: 13px;
+  height: 27px;
   justify-content: center;
   line-height: 1;
   text-align: center;
-  width: 31px;
+  width: 27px;
 }
 .m-backnumber__text {
-  font-size: 18px;
+  font-size: 13px;
 }
 .m-backnumber__toggle {
   background-color: var(--COLOR_BACKGROUND_BAIGE_DARK);
@@ -339,8 +363,8 @@
   color: var(--COLOR_TEXT_BLUE_DARK);
   cursor: pointer;
   display: block;
-  font-size: 18px;
-  min-height: 75px;
+  font-size: 12px;
+  min-height: 64px;
   padding: 10px;
   transition: all ease 0.3s;
   width: 100%;
@@ -361,15 +385,15 @@
   position: relative;
 }
 .m-backnumber__toggle > span::after {
-  border-bottom: 3px solid var(--COLOR_TEXT_BLUE_DARK);
-  border-right: 3px solid var(--COLOR_TEXT_BLUE_DARK);
+  border-bottom: 2px solid var(--COLOR_TEXT_BLUE_DARK);
+  border-right: 2px solid var(--COLOR_TEXT_BLUE_DARK);
   content: "";
   display: inline-block;
-  height: 9px;
+  height: 6px;
   margin: -4px 0 0;
   transform: rotate(45deg);
   transition: all ease 0.3s;
-  width: 9px;
+  width: 6px;
 }
 .m-backnumber__disclosure {
   width: 100%;
@@ -378,15 +402,26 @@
 .m-card-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 16px;
   margin-top: 64px;
+  padding-bottom: 64px;
+  position: relative;
+}
+.m-card-list::after {
+  background: url(../../../img/special/itadakimeshi/bg_icon-2.png) center/100% no-repeat;
+  bottom: 0;
+  content: "";
+  height: 38px;
+  position: absolute;
+  left: -15px;
+  width: 136px;
 }
 
 .c-modal-button {
   position: relative;
 }
 .c-modal-button::before {
-  background: url(../../img/special/itadakimeshi/icon_plus.png) center/auto no-repeat;
+  background: url(../../../img/special/itadakimeshi/icon_plus.png) center/auto no-repeat;
   bottom: 12px;
   content: "";
   height: 25px;
@@ -401,12 +436,12 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 24px 25px 30px;
+  padding: 16px 17px 30px;
   position: relative;
 }
 .c-card__image {
   font-size: 0;
-  margin-top: 16px;
+  margin-top: 10px;
 }
 .c-card__image img {
   object-fit: fill;
@@ -415,60 +450,59 @@
   margin-top: 20px;
 }
 .c-card__dt {
-  font-size: 24px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
 }
 .c-card__dd {
-  font-size: 18px;
+  font-size: 12px;
   margin-top: 10px;
 }
 
 .c-card-item {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 18px;
   position: relative;
 }
 .c-card-item a {
   color: blue;
 }
 .c-card-item__image {
-  border-radius: 20px;
-  flex: 0 0 294px;
+  border-radius: 10px;
+  font-size: 0;
   overflow: hidden;
 }
 .c-card-item__image img {
   object-fit: fill;
 }
-.c-card-item__content {
-  flex: 1 1 0;
-}
 .c-card-item__head {
-  padding-right: 82px;
+  display: flex;
+  justify-content: space-between;
 }
 .c-card-item__title {
-  font-size: 20px;
-  font-weight: normal;
+  font-size: 13px;
 }
 .c-card-item__icon {
-  position: absolute;
-  right: 0;
-  top: 0;
+  flex: 0 0 60px;
+}
+.c-card-item__icon img {
+  max-width: 100%;
+  margin-left: auto;
 }
 .c-card-item__subheading {
-  font-size: 18px;
+  font-size: 12px;
 }
 .c-card-item__text {
-  font-size: 18px;
+  font-size: 12px;
 }
 
 .c-card-story {
   background: var(--COLOR_BACKGROUND_BAIGE_DARK);
-  border-radius: 20px;
-  margin-top: 62px;
-  padding: 18px 30px 25px;
+  border-radius: 10px;
+  margin-top: 48px;
+  padding: 18px 10px 25px;
 }
 .c-card-story__content {
   display: flex;
@@ -480,7 +514,7 @@
   font-size: 0;
 }
 .c-card-story__description {
-  font-size: 18px;
+  font-size: 12px;
 }
 .c-card-story__space {
   float: left;
@@ -496,20 +530,18 @@
 .c-heading {
   align-items: center;
   display: flex;
-  font-size: 26px;
+  font-size: 17px;
   gap: 6px;
-}
-.c-heading--center {
   justify-content: center;
 }
 .c-heading::before {
-  border: 6px solid var(--COLOR_BASE_YELLOW);
+  border: 4px solid var(--COLOR_BASE_YELLOW);
   border-radius: 50%;
   box-sizing: border-box;
   content: "";
   display: flex;
-  height: 23px;
-  width: 23px;
+  height: 15px;
+  width: 15px;
 }
 .c-heading--small::before {
   height: 21px;
@@ -519,33 +551,33 @@
 .c-list-definition {
   display: flex;
   flex-wrap: wrap;
-  font-size: 18px;
+  font-size: 12px;
   gap: 12px 20px;
 }
 .c-list-definition__item {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 5px 7px;
+  gap: 5px 2px;
 }
 .c-list-definition__term {
   background: var(--COLOR_BACKGROUND_BAIGE_DARK);
-  border-radius: 7px;
+  border-radius: 3.5px;
   line-height: 1.4;
-  padding: 0 10px;
+  padding: 0 7px;
+}
+.c-list-definition__description {
+  padding-left: 5px;
 }
 
 .c-list-bullet {
   color: #666;
-  font-size: 16px;
+  font-size: 12px;
 }
 .c-list-bullet__item {
   display: flex;
 }
 
-.c-pager {
-  font-size: 18px;
-}
 .c-pager__content {
   display: flex;
   justify-content: center;
@@ -553,11 +585,17 @@
 }
 .c-pager__link {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  font-size: 12px;
+}
+.c-pager__link--next {
+  align-items: flex-end;
+  flex-direction: column-reverse;
 }
 .c-pager__arrow {
   color: var(--COLOR_TEXT_BLUE_DARK);
   display: flex;
+  font-size: 15px;
   gap: 5px;
 }
 .c-pager__arrow--prev::before {
@@ -578,6 +616,6 @@
 }
 .js-floating-image__image {
   clear: both;
-  float: left;
-  margin: 10px 10px 0 0;
+  float: right;
+  margin: 10px 0 0 10px;
 }
