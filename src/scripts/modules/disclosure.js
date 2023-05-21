@@ -1,6 +1,6 @@
 export default class Disclosure {
   /**
-   * @param {HTMLElement} buttonNode
+   * @param {HTMLElement} element
    */
   constructor(element) {
     this.root = element;

@@ -3,11 +3,12 @@
   --COLOR_BASE_WHITE: #FFF;
   --COLOR_BASE_YELLOW: #FFCC00;
   --COLOR_BASE_GRAY: #EEE;
+  --COLOR_BASE_GRAY_DARK: #333;
   --COLOR_TEXT_WHITE: #FFF;
   --COLOR_TEXT_GRAY: #999;
   --COLOR_TEXT_BLUE: #3366FF;
   --COLOR_TEXT_BLUE_DARK: #0066FF;
-  --COLOR_BACKGROUND_BREADCRUMB: #707070;
+  --COLOR_BACKGROUND_BREADCRUMB: #333;
   --COLOR_BACKGROUND_WHITE: #FFF;
   --COLOR_BACKGROUND_ITADAKIMESHI: #F4F0EB;
   --COLOR_BACKGROUND_BAIGE_DARK: #E9E2D9;
@@ -44,6 +45,13 @@ div#main {
   padding: 0;
 }
 
+/**************************\
+  Basic Modal Styles
+\**************************/
+.modal {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
 .modal__overlay {
   position: fixed;
   top: 0;
@@ -63,8 +71,9 @@ div#main {
   max-width: 500px;
   max-height: 100vh;
   border-radius: 4px;
-  overflow-y: auto;
+  overflow-y: unset;
   box-sizing: border-box;
+  position: relative;
 }
 
 .modal__header {
@@ -86,17 +95,15 @@ div#main {
 .modal__close {
   background: transparent;
   border: 0;
+  position: absolute;
+  right: 0;
+  top: -25px;
 }
 
-.modal__header .modal__close:before {
+.modal__close:before {
   content: "✕";
-}
-
-.modal__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.8);
+  font-size: 25px;
+  color: #fff;
 }
 
 .modal__btn {
@@ -215,28 +222,18 @@ div#main {
   cursor: pointer;
 }
 
-.l-mainVisual {
-  background: url(../../img/special/itadakimeshi/img_kv-1.jpg) center/cover no-repeat;
-}
-.l-mainVisual__icon {
-  display: flex;
-  justify-content: flex-end;
-  padding: 40px;
-}
 .l-mainVisual__title img {
+  height: auto;
+  width: 100%;
   margin: 0 auto;
-}
-.l-mainVisual__text {
-  color: var(--COLOR_TEXT_WHITE);
-  font-size: 36px;
-  text-align: center;
 }
 
 .l-content {
   display: flex;
   gap: 50px;
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 60px auto 0;
+  padding: 0 20px;
   position: relative;
 }
 .l-content::before, .l-content::after {
@@ -252,7 +249,7 @@ div#main {
 }
 .l-content::after {
   background: url(../../img/special/itadakimeshi/bg_icon-3.png) center/auto no-repeat;
-  bottom: 57px;
+  bottom: 124px;
   height: 337px;
   right: -373px;
   width: 586px;
@@ -337,7 +334,7 @@ div#main {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-top: 25px;
+  margin-top: 18px;
 }
 
 .m-banner-list {
@@ -355,6 +352,9 @@ div#main {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+.m-backnumber__head {
+  padding: 13px 0;
 }
 .m-backnumber__list {
   width: 100%;
@@ -436,6 +436,19 @@ div#main {
   margin-top: 64px;
 }
 
+.c-modal-button {
+  position: relative;
+}
+.c-modal-button::before {
+  background: url(../../img/special/itadakimeshi/icon_plus.png) center/auto no-repeat;
+  bottom: 12px;
+  content: "";
+  height: 25px;
+  left: 12px;
+  position: absolute;
+  width: 24px;
+}
+
 .c-card {
   background: var(--COLOR_BACKGROUND_WHITE);
   border-radius: 20px;
@@ -448,6 +461,9 @@ div#main {
 .c-card__image {
   font-size: 0;
   margin-top: 16px;
+}
+.c-card__image img {
+  object-fit: fill;
 }
 .c-card__content {
   margin-top: 20px;
@@ -475,6 +491,9 @@ div#main {
   border-radius: 20px;
   flex: 0 0 294px;
   overflow: hidden;
+}
+.c-card-item__image img {
+  object-fit: fill;
 }
 .c-card-item__content {
   flex: 1 1 0;
@@ -555,13 +574,13 @@ div#main {
   display: flex;
   flex-wrap: wrap;
   font-size: 18px;
-  gap: 15px 20px;
+  gap: 12px 20px;
 }
 .c-list-definition__item {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 5px;
+  gap: 5px 7px;
 }
 .c-list-definition__term {
   background: var(--COLOR_BACKGROUND_BAIGE_DARK);
@@ -606,4 +625,13 @@ div#main {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.js-floating-image__spacer {
+  float: left;
+}
+.js-floating-image__image {
+  clear: both;
+  float: left;
+  margin: 10px 10px 0 0;
 }

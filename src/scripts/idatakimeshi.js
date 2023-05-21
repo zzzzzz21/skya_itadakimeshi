@@ -1,4 +1,6 @@
 import Disclosure from "./modules/disclosure";
+import NavigationCurrent from "./modules/navigationCurrent";
+import FloatingImage from "./modules/floatingImage";
 import MicroModal from 'micromodal';
 
 
@@ -10,7 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.querySelectorAll('.js-disclosure').forEach((element) => {
-    const disclosure = new Disclosure(element);
-    disclosure.init();
+    const instance = new Disclosure(element);
+    instance.init();
   });
+
+  document.querySelectorAll('.js-navigation-current').forEach((element) => {
+    const instance = new NavigationCurrent(element);
+    instance.init();
+  })
+
+  document.querySelectorAll('.js-floating-image').forEach((element) => {
+    const instance = new FloatingImage(element);
+    instance.init();
+  })
 });

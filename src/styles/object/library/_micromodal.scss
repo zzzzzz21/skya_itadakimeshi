@@ -1,3 +1,11 @@
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+.modal {
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+}
+
 .modal__overlay {
   position: fixed;
   top: 0;
@@ -17,8 +25,9 @@
   max-width: 500px;
   max-height: 100vh;
   border-radius: 4px;
-  overflow-y: auto;
+  overflow-y: unset;
   box-sizing: border-box;
+  position: relative;
 }
 
 .modal__header {
@@ -40,15 +49,22 @@
 .modal__close {
   background: transparent;
   border: 0;
+  position: absolute;
+  right: 0;
+  top: -25px;
 }
 
-.modal__header .modal__close:before { content: "\2715"; }
+.modal__close:before {
+  content: "\2715";
+  font-size: 25px;
+  color: #fff;
+}
 
 .modal__content {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  line-height: 1.5;
-  color: rgba(0,0,0,.8);
+  // margin-top: 2rem;
+  // margin-bottom: 2rem;
+  // line-height: 1.5;
+  // color: rgba(0,0,0,.8);
 }
 
 .modal__btn {

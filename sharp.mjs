@@ -30,13 +30,13 @@ async function compressImages(inputDir, outputDir) {
         case '.jpg':
         case '.jpeg':
           await sharp(filePath)
-            .jpeg({ quality: 80 })
+            .jpeg({ quality: 100 })
             .toFile(outputFilePath)
             .catch((err) => console.error(`Error compressing image ${filePath}:`, err));
           break;
         case '.png':
           await sharp(filePath)
-            .png({ compressionLevel: 9 })
+            .png({ compressionLevel: 6 })
             .toFile(outputFilePath)
             .catch((err) => console.error(`Error compressing image ${filePath}:`, err));
           break;

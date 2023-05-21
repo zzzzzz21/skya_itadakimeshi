@@ -19,32 +19,21 @@
 }
 
 .l-mainVisual {
-  background: url(../../img/special/itadakimeshi/img_kv-1.jpg) center/cover no-repeat;
-
-  &__icon {
-    display: flex;
-    justify-content: flex-end;
-    padding: 40px;
-  }
-
   &__title {
     img {
+      height: auto;
+      width: 100%;
       margin: 0 auto;
     }
-  }
-
-  &__text {
-    color: var(--COLOR_TEXT_WHITE);
-    font-size: 36px;
-    text-align: center;
   }
 }
 
 .l-content {
   display: flex;
   gap: 50px;
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 60px auto 0;
+  padding: 0 20px;
   position: relative;
 
   &::before,
@@ -63,7 +52,7 @@
 
   &::after {
     background: url(../../img/special/itadakimeshi/bg_icon-3.png) center/auto no-repeat;
-    bottom: 57px;
+    bottom: 124px;
     height: 337px;
     right: -373px;
     width: 586px;
@@ -157,7 +146,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-top: 25px;
+    margin-top: 18px;
   }
 }
 
@@ -177,9 +166,14 @@
   flex-direction: column;
   overflow: hidden;
 
+  &__head {
+    padding: 13px 0;
+  }
+
   &__list {
     width: 100%;
   }
+
   &__item {
     border: 1px dashed var(--COLOR_BORDER_ITADAKIMESHI);
   }
@@ -271,6 +265,20 @@
   margin-top: 64px;
 }
 
+.c-modal-button {
+  position: relative;
+
+  &::before {
+    background: url(../../img/special/itadakimeshi/icon_plus.png) center/auto no-repeat;
+    bottom: 12px;
+    content: "";
+    height: 25px;
+    left: 12px;
+    position: absolute;
+    width: 24px;
+  }
+}
+
 .c-card {
   background: var(--COLOR_BACKGROUND_WHITE);
   border-radius: 20px;
@@ -283,6 +291,10 @@
   &__image {
     font-size: 0;
     margin-top: 16px;
+
+    & img {
+      object-fit: fill;
+    }
   }
 
   &__content {
@@ -315,6 +327,10 @@
     border-radius: 20px;
     flex: 0 0 294px;
     overflow: hidden;
+
+    & img {
+      object-fit: fill;
+    }
   }
 
   &__content {
@@ -413,13 +429,13 @@
   display: flex;
   flex-wrap: wrap;
   font-size: 18px;
-  gap: 15px 20px;
+  gap: 12px 20px;
 
   &__item {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 5px;
+    gap: 5px 7px;
   }
 
   &__term {
@@ -475,4 +491,16 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.js-floating-image {
+  &__spacer {
+    float: left;
+  }
+
+  &__image {
+    clear: both;
+    float: left;
+    margin: 10px 10px 0 0;
+  }
 }
