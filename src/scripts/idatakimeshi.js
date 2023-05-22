@@ -20,7 +20,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const instance = new NavigationCurrent(element);
     instance.init();
   })
+});
 
+window.addEventListener('load', function () {
   document.querySelectorAll('.js-floating-image').forEach((element) => {
     const instance = new FloatingImage(element);
     instance.init();

@@ -45,6 +45,31 @@ div#main {
   padding: 0;
 }
 
+.social {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.social-head {
+  color: rgb(204, 204, 204);
+  font-size: 14px;
+}
+
+.social-button {
+  margin-top: 10px;
+}
+
+.social-button > div {
+  display: inline-block;
+  margin: 0 10px;
+}
+.social-button > div button {
+  transition: all ease 0.3s;
+}
+.social-button > div button:hover {
+  opacity: 0.5;
+}
+
 /**************************\
   Basic Modal Styles
 \**************************/
@@ -68,8 +93,8 @@ div#main {
 .modal__container {
   background-color: #fff;
   padding: 30px;
-  max-width: 500px;
-  max-height: 100vh;
+  max-width: 80vw;
+  max-height: 80vh;
   border-radius: 4px;
   overflow-y: unset;
   box-sizing: border-box;
@@ -97,7 +122,7 @@ div#main {
   border: 0;
   position: absolute;
   right: 0;
-  top: -25px;
+  top: -35px;
 }
 
 .modal__close:before {
@@ -297,6 +322,7 @@ div#main {
   display: flex;
   flex: 0 0 103px;
   font-size: 40px;
+  font-weight: 700;
   justify-content: center;
   line-height: 1;
   padding: 5px 10px;
@@ -305,7 +331,7 @@ div#main {
 }
 .m-introduction__title {
   font-size: 52px;
-  font-weight: normal;
+  font-weight: 700;
 }
 .m-introduction__subheading {
   color: var(--COLOR_BASE_YELLOW);
@@ -315,6 +341,7 @@ div#main {
 }
 .m-introduction__text {
   font-size: 20px;
+  font-weight: 700;
   margin-top: 12px;
 }
 
@@ -343,7 +370,7 @@ div#main {
 }
 
 .m-pager {
-  margin-top: 112px;
+  margin-top: 62px;
 }
 
 .m-backnumber {
@@ -651,4 +678,9 @@ div#main {
   clear: both;
   float: left;
   margin: 10px 10px 0 0;
+  max-width: 100px;
+}
+
+.js-disclosure__content:not(.is-show) li:nth-of-type(n + 5) {
+  display: none;
 }

@@ -43,8 +43,8 @@
 .modal__container {
   background-color: #fff;
   padding: 30px;
-  max-width: 500px;
-  max-height: 100vh;
+  max-width: 80vw;
+  max-height: 80vh;
   border-radius: 4px;
   overflow-y: unset;
   box-sizing: border-box;
@@ -72,7 +72,7 @@
   border: 0;
   position: absolute;
   right: 0;
-  top: -25px;
+  top: -35px;
 }
 
 .modal__close:before {
@@ -196,6 +196,9 @@
   border: none;
   cursor: pointer;
 }
+.itadakimeshi .modal__container {
+  padding: 15px;
+}
 
 .l-mainVisual__title img {
   height: auto;
@@ -254,7 +257,7 @@
 .m-introduction__date {
   color: var(--COLOR_TEXT_GRAY);
   display: block;
-  font-size: 10px;
+  font-size: 11px;
 }
 .m-introduction__head {
   align-items: center;
@@ -271,6 +274,7 @@
   display: flex;
   flex: 0 0 48px;
   font-size: 18px;
+  font-weight: 700;
   justify-content: center;
   line-height: 1;
   padding: 2px 5px;
@@ -280,14 +284,16 @@
 .m-introduction__title {
   font-size: 24px;
   font-weight: normal;
+  font-weight: 700;
 }
 .m-introduction__subheading {
   color: var(--COLOR_BASE_YELLOW);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0;
 }
 .m-introduction__text {
   font-size: 12px;
+  font-weight: 700;
   margin-top: 12px;
 }
 
@@ -502,7 +508,7 @@
   font-size: 13px;
 }
 .c-card-item__icon {
-  flex: 0 0 60px;
+  flex: 0 0 80px;
 }
 .c-card-item__icon img {
   max-width: 100%;
@@ -641,4 +647,9 @@
   clear: both;
   float: right;
   margin: 10px 0 0 10px;
+  max-width: 100px;
+}
+
+.js-disclosure__content:not(.is-show) li:nth-of-type(n + 5) {
+  display: none;
 }

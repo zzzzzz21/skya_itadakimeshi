@@ -26,14 +26,14 @@ export default class Disclosure {
   // 要素を表示
   showContent() {
     if (this.controlledElment) {
-      this.controlledElment.style.display = 'block';
+      this.controlledElment.classList.add('is-show');
     }
   }
 
   // 要素を非表示
   hideContent() {
     if (this.controlledElment) {
-      this.controlledElment.style.display = 'none';
+      this.controlledElment.classList.remove('is-show');
     }
   }
 

@@ -46,3 +46,26 @@ div#contWarp {
 div#main {
   padding: 0;
 }
+
+.social {
+  margin-top: 60px;
+  text-align: center;
+}
+.social-head {
+  color: rgb(204,204,204);
+  font-size: 14px;
+}
+.social-button {
+  margin-top: 10px;
+}
+.social-button>div {
+  display: inline-block;
+  margin: 0 10px;
+
+  button {
+    transition: all ease .3s;
+    &:hover {
+      opacity: .5;
+    }
+  }
+}

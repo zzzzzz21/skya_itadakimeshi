@@ -80,7 +80,6 @@
     margin-bottom: 36px;
   }
 
-
   &__date {
     color:  var(--COLOR_TEXT_GRAY);
     display: block;
@@ -104,6 +103,7 @@
     display: flex;
     flex: 0 0 103px;
     font-size: 40px;
+    font-weight: 700;
     justify-content: center;
     line-height: 1;
     padding: 5px 10px;
@@ -113,7 +113,7 @@
 
   &__title {
     font-size: 52px;
-    font-weight: normal;
+    font-weight: 700;
   }
 
   &__subheading {
@@ -125,6 +125,7 @@
 
   &__text {
     font-size: 20px;
+    font-weight: 700;
     margin-top: 12px;
   }
 }
@@ -156,7 +157,7 @@
 }
 
 .m-pager {
-  margin-top: 112px;
+  margin-top: 62px;
 }
 
 .m-backnumber {
@@ -527,5 +528,16 @@
     clear: both;
     float: left;
     margin: 10px 10px 0 0;
+    max-width: 100px;
+  }
+}
+
+.js-disclosure {
+  &__content {
+    &:not(.is-show) {
+      li:nth-of-type(n + 5) {
+        display: none;
+      }
+    }
   }
 }

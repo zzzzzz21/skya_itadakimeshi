@@ -10,17 +10,12 @@ export default class FloatingImage {
 
   init() {
     this.calc();
-    // window.addEventListener('resize', this.resize.bind(this));
   }
 
   calc() {
     this.elementHeight = this.root.offsetHeight;
-    this.imageHeight = this.image.offsetHeight;
+    this.imageHeight = this.image.clientHeight;
     const diff = this.elementHeight - this.imageHeight;
     this.spacer.style.height = `${diff}px`;
   }
-
-  // resize() {
-  //   this.calc();
-  // }
 }

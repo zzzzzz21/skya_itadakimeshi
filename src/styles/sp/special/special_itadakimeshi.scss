@@ -16,6 +16,10 @@
 
     letter-spacing: .025em;
     line-height: 1.7;
+
+    .modal__container {
+      padding: 15px;
+    }
 }
 
 .l-mainVisual {
@@ -90,7 +94,7 @@
   &__date {
     color:  var(--COLOR_TEXT_GRAY);
     display: block;
-    font-size: 10px;
+    font-size: 11px;
   }
 
   &__head {
@@ -109,6 +113,7 @@
     display: flex;
     flex: 0 0 48px;
     font-size: 18px;
+    font-weight: 700;
     justify-content: center;
     line-height: 1;
     padding: 2px 5px;
@@ -119,16 +124,18 @@
   &__title {
     font-size: 24px;
     font-weight: normal;
+    font-weight: 700;
   }
 
   &__subheading {
     color: var(--COLOR_BASE_YELLOW);
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0;
   }
 
   &__text {
     font-size: 12px;
+    font-weight: 700;
     margin-top: 12px;
   }
 }
@@ -384,7 +391,7 @@
   }
 
   &__icon {
-    flex: 0 0 60px;
+    flex: 0 0 80px;
     img {
       max-width: 100%;
       margin-left: auto;
@@ -554,5 +561,16 @@
     clear: both;
     float: right;
     margin: 10px 0 0 10px;
+    max-width: 100px;
+  }
+}
+
+.js-disclosure {
+  &__content {
+    &:not(.is-show) {
+      li:nth-of-type(n + 5) {
+        display: none;
+      }
+    }
   }
 }

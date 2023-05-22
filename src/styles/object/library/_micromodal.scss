@@ -22,8 +22,10 @@
 .modal__container {
   background-color: #fff;
   padding: 30px;
-  max-width: 500px;
-  max-height: 100vh;
+  // max-width: 500px;
+  // max-height: 100vh;
+  max-width: 80vw;
+  max-height: 80vh;
   border-radius: 4px;
   overflow-y: unset;
   box-sizing: border-box;
@@ -51,7 +53,7 @@
   border: 0;
   position: absolute;
   right: 0;
-  top: -25px;
+  top: -35px;
 }
 
 .modal__close:before {
