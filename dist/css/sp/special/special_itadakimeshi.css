@@ -81,6 +81,13 @@
   color: #fff;
 }
 
+.modal__content img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
 .modal__btn {
   font-size: 0.875rem;
   padding-left: 1rem;
@@ -508,11 +515,15 @@
   font-size: 13px;
 }
 .c-card-item__icon {
-  flex: 0 0 80px;
+  flex: 0 0 62px;
+  height: 45px;
 }
 .c-card-item__icon img {
+  height: auto;
+  max-height: 100%;
   max-width: 100%;
   margin-left: auto;
+  width: auto;
 }
 .c-card-item__subheading {
   font-size: 12px;

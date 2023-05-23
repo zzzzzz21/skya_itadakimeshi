@@ -131,6 +131,13 @@ div#main {
   color: #fff;
 }
 
+.modal__content img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
 .modal__btn {
   font-size: 0.875rem;
   padding-left: 1rem;

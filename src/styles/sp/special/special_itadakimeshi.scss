@@ -378,8 +378,6 @@
     }
   }
 
-  &__content {
-  }
 
   &__head {
     display: flex;
@@ -391,10 +389,14 @@
   }
 
   &__icon {
-    flex: 0 0 80px;
+    flex: 0 0 62px;
+    height: 45px;
     img {
+      height: auto;
+      max-height: 100%;
       max-width: 100%;
       margin-left: auto;
+      width: auto;
     }
   }
 

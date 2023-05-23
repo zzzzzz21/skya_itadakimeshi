@@ -3,9 +3,6 @@ import NavigationCurrent from "./modules/navigationCurrent";
 import FloatingImage from "./modules/floatingImage";
 import MicroModal from 'micromodal';
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
   MicroModal.init({
     disableScroll: true,
