@@ -282,7 +282,6 @@
 
 .c-modal-button {
   position: relative;
-  display: block;
 
   &::before {
     background: url(../../img/special/itadakimeshi/icon_plus.png) center/auto no-repeat;
@@ -342,10 +341,11 @@
   &__image {
     border-radius: 20px;
     flex: 0 0 294px;
-    overflow: hidden;
+    //overflow: hidden;
 
     & img {
       object-fit: fill;
+      border-radius: 10px;
     }
   }
 

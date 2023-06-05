@@ -481,7 +481,6 @@ div#main {
 
 .c-modal-button {
   position: relative;
-  display: block;
 }
 .c-modal-button::before {
   background: url(../../img/special/itadakimeshi/icon_plus.png) center/auto no-repeat;
@@ -534,10 +533,10 @@ div#main {
 .c-card-item__image {
   border-radius: 20px;
   flex: 0 0 294px;
-  overflow: hidden;
 }
 .c-card-item__image img {
   object-fit: fill;
+  border-radius: 10px;
 }
 .c-card-item__content {
   flex: 1 1 0;
