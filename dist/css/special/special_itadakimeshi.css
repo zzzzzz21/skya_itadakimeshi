@@ -504,6 +504,15 @@ div#main {
 .c-card__image {
   font-size: 0;
   margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.c-card__image button:nth-child(1) {
+  margin-bottom: 1em;
+}
+.c-card__image button:nth-child(n+2) {
+  width: calc((100% - 1em) / 2);
 }
 .c-card__image img {
   object-fit: fill;
