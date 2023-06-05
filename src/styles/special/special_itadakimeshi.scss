@@ -282,6 +282,7 @@
 
 .c-modal-button {
   position: relative;
+  display: block;
 
   &::before {
     background: url(../../img/special/itadakimeshi/icon_plus.png) center/auto no-repeat;
