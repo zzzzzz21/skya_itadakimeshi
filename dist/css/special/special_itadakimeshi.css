@@ -552,10 +552,10 @@ div#main {
 }
 .c-card-item__head {
   padding-right: 82px;
+  font-weight: 700;
 }
 .c-card-item__title {
   font-size: 20px;
-  font-weight: normal;
 }
 .c-card-item__icon {
   position: absolute;
@@ -658,10 +658,9 @@ div#main {
   display: inline-block;
   vertical-align: middle;
   width: auto;
-  height: 1.6em;
+  height: 40px;
 }
 .c-list-definition__description__meta img:nth-child(2) {
-  margin: 0 0.5em;
   height: auto;
 }
 

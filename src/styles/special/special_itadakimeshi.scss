@@ -366,11 +366,11 @@
 
   &__head {
     padding-right: 82px;
+    font-weight: 700;
   }
 
   &__title {
     font-size: 20px;
-    font-weight: normal;
   }
 
   &__icon {
@@ -490,9 +490,8 @@
         display: inline-block;
         vertical-align: middle;
         width: auto;
-        height: 1.6em;
+        height: 40px;
         &:nth-child(2) {
-          margin: 0 .5em;
           height: auto;
         }
       }

@@ -391,6 +391,7 @@
   &__head {
     display: flex;
     justify-content: space-between;
+    font-weight: 700;
   }
 
   &__title {
@@ -510,10 +511,9 @@
         display: inline-block;
         vertical-align: middle;
         width: auto;
-        height: 1.8em;
+        height: 2.8em;
         &:nth-child(2) {
-          margin: 0 .5em;
-          height:1em;
+          height:1.6em;
         }
       }
     }
