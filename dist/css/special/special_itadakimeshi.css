@@ -132,7 +132,7 @@ div#main {
 }
 
 .modal__content img {
-  max-height: 100%;
+  max-height: calc(80vh - 60px);
   max-width: 100%;
   height: auto;
   width: auto;
